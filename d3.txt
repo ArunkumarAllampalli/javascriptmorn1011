@@ -5,7 +5,11 @@ int x = 10;
 int y = 20;
 int z = x+y;
 
+<<<<<<< HEAD
 a = a*b;
+=======
+x = x*y;
+>>>>>>> da2fc518770831afdb39dbab95cf9a99c312043e
 
 while(num>0){
 
