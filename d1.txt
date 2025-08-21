@@ -4,4 +4,10 @@ int a = 10;
 int b = 20;
 int c = a+b;
 
+story 130
+
+int p = 3;
+int q = 4;
+int r = p*q;
+
 
