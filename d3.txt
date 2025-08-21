@@ -7,3 +7,10 @@ while(num>0){
 
 	
 }
+
+story 12
+===========
+
+let a = 5;
+let b = 3;
+let c = a+b;
