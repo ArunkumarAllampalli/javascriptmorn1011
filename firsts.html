@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = Number(prompt("Enter a number"));
+        let copy = num; // copy = 123
+        let rev = 0;
+
+
+
+       do
+        { // num = 123 num = 12>0 num = 1>0 num = 0>0
+            let ld = num%10; //ld = 123%10 => ld = 3 ld = 12%10 ld = 2 ld = 1%10=> ld = 1
+            rev = rev*10+ld; // rev = 0*10+3 rev = 3 rev = 3*10+2 rev = 32  rev = 321
+            num = Math.floor(num/10);// num = 123/10 num = 12 num = 12/10 num = 1 num = 0
+        } while(num>0);
+
+        //document.writeln("<h2>Revers number is : "+rev+"</h2>");
+        if(copy==rev){
+            alert("given number is palidrome")
+        }else{
+          alert("given number is not a palindrome");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
