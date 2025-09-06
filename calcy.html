@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 50px;
+            border:1px solid gray;
+            background-color:lightblue;
+            height: 250px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #t1{
+            margin-top: 10px;
+        }
+        .btn{
+            margin-top:20px;
+            margin-left: 15px;
+            margin-right: 15px  ;
+            width: 30px;
+            height: 20px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <script>
+       let res,a,b,opr;
+        function fun(val){ // will bring the values
+            res = document.getElementById("t1").value+=val;
+           
+        }
+        function oper(sym){
+            a =Number(res);
+            opr=sym;
+          res =  document.getElementById("t1").value = "";
+        }
+        function cal(){
+            alert(res)
+         b = Number(res);
+         switch(opr){
+            case "+":
+                res = a+b;break;
+            case "-":
+                res = a-b;break;
+            case "x":
+                res = a*b;break;
+            case "/":
+                res = a/b;break;
+                
+         }
+         document.getElementById("t1").value = res;
+        }
+    </script>
+</head>
+<body>
+    
+        <div align="center">
+        <input type="text" id="t1">
+        <button class="btn" onclick="fun('1')">1</button>
+        <button class="btn" id="b2" onclick="fun('2')">2</button>
+        <button class="btn" id="b3" onclick="fun('3')">3</button>
+        <br>
+        <button class="btn" id="b4" onclick="fun('4')">4</button>
+        <button class="btn" id="b5" onclick="fun('5')">5</button>
+        <button class="btn" id="b6" onclick="fun('6')">6</button>
+        <br>
+        <button class="btn" id="b7" onclick="fun('7')">7</button>
+        <button class="btn" id="b8" onclick="fun('8')">8</button>
+        <button class="btn" id ="b9" onclick="fun('9')">9</button>
+<br>
+        <button class="btn" id="b10" onclick="fun('0')">0</button>
+        <button class="btn" id="+" onclick="oper('+')">+</button>
+        <button class="btn" id="-" onclick="oper('-')">-</button>
+        <br>
+        <button class="btn" id="x" onclick="oper('x')">x</button>
+        <button class="btn" id="/" onclick="oper('/')">/</button>
+        <button class="btn" id="=" onclick="cal()">=</button>
+
+    </div>
+    
+</body>
+</html>
