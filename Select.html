@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <select name="" id="s1">
+    <option value="html">HTML</option>
+     <option value="css">CSS</option>
+ </select>
+ <input type="text" id="t1" placeholder="Enter Course">
+ <button id = "b1">Add</button>
+ <script>
+  let button = document.getElementById("b1");
+  button.addEventListener("click",()=>{
+    let input = document.getElementById("t1").value;
+    let select = document.getElementById("s1");
+    let booleanvalue = true;
+    for(let op of select.options){
+        if(input===op.value){
+            booleanvalue = false;
+            alert(booleanvalue)
+            document.getElementById("t1").value =""
+        }
+    }
+    
+    if(booleanvalue){
+        let option = document.createElement('option')
+        option.text = input;
+        option.value = input;
+        select.appendChild(option);
+        document.getElementById("t1").value =""
+    }
+    
+  })
+ </script>
+</body>
+</html>

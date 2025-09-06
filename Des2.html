@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Employee = {
+            eid : 111,
+            ename:"abc",
+            esal : 50000
+        }
+        document.writeln("<br>"+JSON.stringify(Employee))
+          document.writeln("<br> Name :"+Employee.ename)
+
+        const {eid,ename,esal}=Employee;
+        document.writeln("<br> Eid : "+eid);
+        document.writeln("<br> Sal : "+esal)
+    </script>
+</body>
+</html>

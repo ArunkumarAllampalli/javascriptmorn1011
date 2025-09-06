@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Employee = {eid:111,ename:'abc',esal:50000,dept :'Hr' };
+        const {ename,...restObject}=Employee;
+        document.writeln("<br> EmpName : "+ename);
+        document.writeln("<br> Rest of  : "+JSON.stringify(restObject))
+    </script>
+</body>
+</html>
